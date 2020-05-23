@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}Upload .docx{% endblock %}
+
+{% block content %}
+    <div class="jumbotron">
+        <h2>Upload a .docx file</h2>
+        <p class="lead">It's important to notice that the .docx file has to be separated between Header and Normal style paragraphs.</p>
+        <hr class="sidebar-divider">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div class="form-group">
+                <button type="submit" value="Save" class="btn btn-primary">Upload</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}

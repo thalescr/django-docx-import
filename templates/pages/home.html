@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}Display text{% endblock %}
+
+{% block content %}
+    <div class="jumbotron">
+        <h1>Displaying uploaded .docx text</h1>
+        <hr class="sidebar-divider">
+        {% for chapter in chapters %}
+            <section id="{{ chapter.id }}">
+                <h2>{{ chapter.title }}</h2>
+                <p class="lead">{{ chapter.text|safe }}</p>
+            </section>
+        {% empty %}
+            <h2>No text here to show. <a href="{% url 'upload' %}">Upload a .docx file!</a></h2>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Searching {{ query }}{% endblock %}
+
+{% block content %}
+    <div class="jumbotron">
+        <h2>Searching {{ query }}</h2>
+        <hr class="sidebar-divider">
+        {% for result in results %}
+            <div>
+                <a href="{% url 'home' %}#{{ result.id }}"><h3>{{ result.title|truncatewords:7 }}</h3></a>
+                <p class="lead">{{ result.text|safe|truncatewords:20 }}</p>
+            </div>
+        {% empty %}
+        {% endfor %}
+    </div>
+{% endblock %}
