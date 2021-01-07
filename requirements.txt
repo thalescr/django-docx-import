@@ -1,7 +1,7 @@
 asgiref==3.2.9
 Django==3.0.7
 docx==0.2.4
-lxml==4.5.1
+lxml==4.6.2
 Pillow==7.1.2
 python-docx==0.8.10
 pytz==2020.1
