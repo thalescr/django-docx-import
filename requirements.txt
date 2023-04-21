@@ -3,4 +3,4 @@ Django==4.1.7
 lxml==4.9.2
 Pillow==9.4.0
 python-docx==0.8.11
-sqlparse==0.4.3
+sqlparse==0.4.4
